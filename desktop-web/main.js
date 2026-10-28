@@ -52,6 +52,15 @@ async function selfTest(){try{
  await new Promise(r=>setTimeout(r,250));
  let moved=await window.webContents.executeJavaScript(`parseFloat(document.querySelector('[data-graph-node="p317-"]').style.left)`);
  if(moved-before.left<100)throw Error('Не удалось перетащить точку по ширине карты');
+ let group=await window.webContents.executeJavaScript(`(()=>{let g=document.querySelector('[data-graph-group="officer"]'),c=document.querySelector('[data-graph-node="p318-1"]'),r=g.getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2,left:parseFloat(g.style.left),child:parseFloat(c.style.left)}})()`);
+ input.sendInputEvent({type:'mouseMove',x:Math.round(group.x),y:Math.round(group.y)});
+ input.sendInputEvent({type:'mouseDown',x:Math.round(group.x),y:Math.round(group.y),button:'left',clickCount:1});
+ input.sendInputEvent({type:'mouseMove',x:Math.round(group.x-100),y:Math.round(group.y),button:'left'});
+ input.sendInputEvent({type:'mouseUp',x:Math.round(group.x-100),y:Math.round(group.y),button:'left',clickCount:1});
+ await new Promise(r=>setTimeout(r,250));
+ let afterGroup=await window.webContents.executeJavaScript(`({left:parseFloat(document.querySelector('[data-graph-group="officer"]').style.left),child:parseFloat(document.querySelector('[data-graph-node="p318-1"]').style.left)})`);
+ if(group.left-afterGroup.left<20||Math.abs((group.left-afterGroup.left)-(group.child-afterGroup.child))>1)throw Error('Категория не переместилась вместе со статьями');
+ moved=await window.webContents.executeJavaScript(`parseFloat(document.querySelector('[data-graph-node="p317-"]').style.left)`);
  await window.webContents.executeJavaScript(`document.querySelector('#desk-full').click()`);
  await new Promise(r=>setTimeout(r,500));
  let after=await window.webContents.executeJavaScript(`parseFloat(document.querySelector('[data-graph-node="p317-"]').style.left)`);
