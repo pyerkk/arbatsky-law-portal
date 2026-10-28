@@ -37,7 +37,26 @@ function createTray(){tray=new Tray(nativeImage.createFromPath(path.join(__dirna
 async function selfTest(){try{
  await new Promise((resolve,reject)=>{if(!window.webContents.isLoading())return resolve();window.webContents.once('did-finish-load',resolve);window.webContents.once('did-fail-load',(_,code,desc)=>reject(Error(code+' '+desc)));});
  const result=await window.webContents.executeJavaScript(`(async()=>{for(let i=0;i<100;i++){if(document.querySelectorAll('[data-graph-node]').length>0&&document.querySelector('#desk-full'))break;await new Promise(r=>setTimeout(r,100));}const check=(v,m)=>{if(!v)throw Error(m)};check(document.querySelectorAll('[data-graph-node]').length>5,'карта не загрузилась');check(document.querySelector('#desk-full'),'панель не появилась');document.querySelector('#node-labels').value='name';document.querySelector('#node-labels').dispatchEvent(new Event('change',{bubbles:true}));check(document.querySelector('.node-name'),'подписи не появились');document.querySelector('#add-note').click();check(document.querySelector('#note-dialog').open,'окно заметки не открылось');document.querySelector('#note-text').value='Проверочная заметка';document.querySelector('#note-form').requestSubmit();check([...document.querySelectorAll('[data-graph-note]')].some(n=>n.textContent.includes('Проверочная заметка')),'заметка не появилась');check(localStorage.getItem('arb-graph-profiles-v2')?.includes('Проверочная заметка'),'заметка не сохранена');document.querySelector('#desk-full').click();await new Promise(r=>setTimeout(r,500));check(document.body.classList.contains('desktop-focus'),'полноэкранная карта не открылась');document.querySelector('#desk-full').click();await new Promise(r=>setTimeout(r,500));check(!document.body.classList.contains('desktop-focus'),'полноэкранная карта не закрылась');return 'ok'})()`);
- if(result!=='ok')throw Error('Неизвестный результат');app.exit(0);
+ if(result!=='ok')throw Error('Неизвестный результат');
+ window.show();window.focus();
+ await window.webContents.executeJavaScript(`document.querySelector('#desk-full').click()`);
+ await new Promise(r=>setTimeout(r,800));
+ let before=await window.webContents.executeJavaScript(`(()=>{let n=document.querySelector('[data-graph-node="p317-"]'),v=document.querySelector('#graph-viewport'),s=document.querySelector('#graph-stage'),r=n.getBoundingClientRect(),vr=v.getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2,target:vr.right-120,left:parseFloat(n.style.left),width:parseFloat(s.style.width),screen:screen.width}})()`);
+ if(before.width<before.screen)throw Error('Поле карты уже экрана');
+ if(before.target-before.x<100)throw Error('Недостаточно места для проверки перемещения');
+ const input=window.webContents;
+ input.sendInputEvent({type:'mouseMove',x:Math.round(before.x),y:Math.round(before.y)});
+ input.sendInputEvent({type:'mouseDown',x:Math.round(before.x),y:Math.round(before.y),button:'left',clickCount:1});
+ input.sendInputEvent({type:'mouseMove',x:Math.round(before.target),y:Math.round(before.y),button:'left'});
+ input.sendInputEvent({type:'mouseUp',x:Math.round(before.target),y:Math.round(before.y),button:'left',clickCount:1});
+ await new Promise(r=>setTimeout(r,250));
+ let moved=await window.webContents.executeJavaScript(`parseFloat(document.querySelector('[data-graph-node="p317-"]').style.left)`);
+ if(moved-before.left<100)throw Error('Не удалось перетащить точку по ширине карты');
+ await window.webContents.executeJavaScript(`document.querySelector('#desk-full').click()`);
+ await new Promise(r=>setTimeout(r,500));
+ let after=await window.webContents.executeJavaScript(`parseFloat(document.querySelector('[data-graph-node="p317-"]').style.left)`);
+ if(Math.abs(after-moved)>1)throw Error('Координата точки изменилась при выходе из карты');
+ app.exit(0);
  }catch(e){try{fs.writeFileSync(path.join(os.tmpdir(),'arbatsky-selftest-error.txt'),String(e.stack||e))}catch{}app.exit(1)}}
 app.whenReady().then(()=>{
  loadSettings();let updated=loadSnapshot();
