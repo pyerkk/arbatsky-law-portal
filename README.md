@@ -6,7 +6,7 @@
 **Документы, статьи и памятки для работы государственных организаций.**  
 Неофициальный игровой справочник, созданный для быстрого поиска информации во время игры.
 
-[Открыть портал](https://pyerkk.github.io/arbatsky-law-portal/)　·　[Карта статей](https://pyerkk.github.io/arbatsky-law-portal/#quick)　·　[Сообщить об ошибке](https://github.com/pyerkk/arbatsky-law-portal/issues/new)
+[Открыть портал](https://pyerkk.github.io/arbatsky-law-portal/)　·　[Карта статей](https://pyerkk.github.io/arbatsky-law-portal/#quick)　·　[Скачать приложение для Windows](https://github.com/pyerkk/arbatsky-law-portal/releases/latest/download/Arbatsky-Overlay-Setup.exe)　·　[Сообщить об ошибке](https://github.com/pyerkk/arbatsky-law-portal/issues/new)
 
 </div>
 
@@ -19,6 +19,10 @@
 ### ◉ Личная карта статей
 
 Быстрый экран вдохновлён картой связей Obsidian. Добавляйте статьи УК, УПК, КоАП, закона и устава ФСБ, а также пункты ПГО в свою подборку: они появятся цветными точками, сгруппированными по темам. Перетаскивайте точки и целые категории, добавляйте свои заметки и выбирайте вид подписей. Выберите точку, чтобы увидеть трактовку, звёзды, срок или штраф и подследственность. Есть готовый популярный набор и отдельная пустая подборка, табличный вид и режим карты на весь экран без боковых панелей — удобно держать карту на втором мониторе.
+
+### ⬡ Приложение для Windows
+
+Карта статей доступна в виде отдельного окна поверх игры. Добавляйте статьи, расставляйте их по экрану и сохраняйте заметки. [Скачать установщик](https://github.com/pyerkk/arbatsky-law-portal/releases/latest/download/Arbatsky-Overlay-Setup.exe) · [Все версии](https://github.com/pyerkk/arbatsky-law-portal/releases).
 
 ### ▤ Документы и статьи
 
