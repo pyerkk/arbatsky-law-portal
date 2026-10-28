@@ -16,3 +16,5 @@
 body.map-focus{overflow:hidden}.map-focus .header,.map-focus footer,.map-focus .graph-top,.map-focus .graph-library,.map-focus .graph-inspector,.map-focus .graph-disclaimer{display:none!important}.map-focus .graph-view{animation:none;transform:none;position:static;padding:0;max-width:none}.map-focus .graph-shell{display:contents}
 
 .graph-node.with-name{max-width:225px;width:max-content}.node-name{max-width:190px;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}.quiz-topics{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}.quiz-topics button[aria-pressed="true"]{border-color:#c3978b;background:#49302d;color:#fff}
+
+.graph-node .node-stars{display:inline-block;margin-left:7px;color:#e7be85;font-size:10px;letter-spacing:0.03em;white-space:nowrap}
