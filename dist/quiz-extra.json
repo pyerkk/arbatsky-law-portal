@@ -1,0 +1,442 @@
+[
+  {
+    "id": 51,
+    "topic": "pgo",
+    "question": "Сотрудник намеренно выбирает самый долгий маршрут к чужой КПЗ. Что говорит ПГО?",
+    "options": [
+      "Намеренно затягивать задержание запрещено",
+      "Это всегда обязательно",
+      "Любой маршрут автоматически запрещён"
+    ],
+    "correct": 0,
+    "explanation": "Пункт 1.4 запрещает намеренное затягивание и оговаривает исключения.",
+    "source": "ПГО, пункт 1.4",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=1.4%20"
+  },
+  {
+    "id": 52,
+    "topic": "pgo",
+    "question": "Игрок имеет две звезды. Какой обычный предел времени КПЗ по ПГО?",
+    "options": [
+      "До 20 минут, если нет предусмотренного исключения",
+      "До 60 минут без условий",
+      "Срок не связан со звёздами"
+    ],
+    "correct": 0,
+    "explanation": "ПГО устанавливает до 10 минут за звезду и перечисляет исключения.",
+    "source": "ПГО, пункт 1.7",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=1.7%20"
+  },
+  {
+    "id": 53,
+    "topic": "pgo",
+    "question": "Задержанный использует режим «Я не слышу». Как разъяснить права и статьи?",
+    "options": [
+      "Отыграть разъяснение в текстовый чат",
+      "Ничего не сообщать",
+      "Показать только число звёзд"
+    ],
+    "correct": 0,
+    "explanation": "Для указанного режима пункт 1.8 предусматривает текстовую отыгровку.",
+    "source": "ПГО, пункт 1.8",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=1.8%20"
+  },
+  {
+    "id": 54,
+    "topic": "pgo",
+    "question": "Задержанный просит расшифровать вменяемые статьи. Что делать?",
+    "options": [
+      "Полностью озвучить содержание статей",
+      "Назвать лишь номер",
+      "Отложить объяснение до освобождения"
+    ],
+    "correct": 0,
+    "explanation": "Пункт 1.8 требует полного разъяснения статей по просьбе игрока.",
+    "source": "ПГО, пункт 1.8",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=1.8%20"
+  },
+  {
+    "id": 55,
+    "topic": "pgo",
+    "question": "Задержанный просит адвоката. Что нужно обеспечить?",
+    "options": [
+      "Возможность вызвать адвоката в установленном порядке",
+      "Автоматически отказать",
+      "Сразу завершить процесс"
+    ],
+    "correct": 0,
+    "explanation": "ПГО требует реализовать право на защиту с учётом исключений.",
+    "source": "ПГО, пункт 1.9",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=1.9%20"
+  },
+  {
+    "id": 56,
+    "topic": "pgo",
+    "question": "Как изымать нелегальные предметы по правилам проекта?",
+    "options": [
+      "Через функционал сервера",
+      "Только устным объявлением",
+      "Передать предметы случайному игроку"
+    ],
+    "correct": 0,
+    "explanation": "Пункт 1.6 предусматривает изъятие через игровой функционал.",
+    "source": "ПГО, пункт 1.6",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=1.6%20"
+  },
+  {
+    "id": 57,
+    "topic": "pgo",
+    "question": "У сотрудника нет основания изымать предметы. Как поступить?",
+    "options": [
+      "Не изымать без причины",
+      "Изъять на всякий случай",
+      "Забрать в личное пользование"
+    ],
+    "correct": 0,
+    "explanation": "ПГО запрещает изъятие предметов без причин.",
+    "source": "ПГО, пункт 1.17",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=1.17%20"
+  },
+  {
+    "id": 58,
+    "topic": "pgo",
+    "question": "У игрока истекли две звезды из трёх. Можно ли заново добавить их только из-за истечения?",
+    "options": [
+      "Нет, такое восстановление запрещено",
+      "Да, всегда восстановить до трёх",
+      "Да, но только до пяти"
+    ],
+    "correct": 0,
+    "explanation": "ПГО относит добавление истёкших звёзд к злоупотреблению функционалом.",
+    "source": "ПГО, пункт 1.20",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=1.20%20"
+  },
+  {
+    "id": 59,
+    "topic": "pgo",
+    "question": "Человек просто носит маску, других оснований нет. Что говорит ПГО?",
+    "options": [
+      "Нельзя задерживать только за маску",
+      "Маска всегда даёт пять звёзд",
+      "Сначала нужно выдать штраф по любой статье"
+    ],
+    "correct": 0,
+    "explanation": "ПГО отдельно запрещает задержание только из-за маски.",
+    "source": "ПГО, пункт 1.20",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=1.20%20"
+  },
+  {
+    "id": 60,
+    "topic": "pgo",
+    "question": "Участник текущей RP-ситуации попросил удостоверение сотрудника. Что сделать с учётом исключений?",
+    "options": [
+      "Предъявить удостоверение",
+      "Игнорировать любой запрос",
+      "Потребовать штраф за сам вопрос"
+    ],
+    "correct": 0,
+    "explanation": "Пункт 1.21.1 устанавливает обязанность и оговаривает исключения.",
+    "source": "ПГО, пункт 1.21.1",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=1.21.1%20"
+  },
+  {
+    "id": 61,
+    "topic": "pgo",
+    "question": "Можно ли использовать служебный дрон для личного подглядывания?",
+    "options": [
+      "Нет, использование не по назначению запрещено",
+      "Да, без ограничений",
+      "Да, если никто не заметил"
+    ],
+    "correct": 0,
+    "explanation": "ПГО запрещает использование дронов не по назначению.",
+    "source": "ПГО, пункт 1.23",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=1.23%20"
+  },
+  {
+    "id": 62,
+    "topic": "pgo",
+    "question": "Когда ФСБ может отрабатывать региональное нарушение по пункту 4.2 ПГО?",
+    "options": [
+      "При запросе старшего состава МВД или ГИБДД и указанных обстоятельствах",
+      "Всегда без условий",
+      "Только по просьбе любого прохожего"
+    ],
+    "correct": 0,
+    "explanation": "ПГО связывает региональную помощь с запросом и предусмотренными обстоятельствами.",
+    "source": "ПГО, пункт 4.2",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=4.2%20"
+  },
+  {
+    "id": 63,
+    "topic": "pgo",
+    "question": "Игрок убит в ходе задержания и находится в больнице. Можно ли задержать его там по этому правилу?",
+    "options": [
+      "Нет",
+      "Да, всегда",
+      "Только если он носит маску"
+    ],
+    "correct": 0,
+    "explanation": "Пункт 7.2 запрещает такое задержание в больнице.",
+    "source": "ПГО, пункт 7.2",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=7.2%20"
+  },
+  {
+    "id": 64,
+    "topic": "pgo",
+    "question": "На каком транспорте силовые структуры обычно выезжают на задержания и патрули?",
+    "options": [
+      "На фракционном транспорте силовых структур",
+      "На любом личном без условий",
+      "Только на транспорте задержанного"
+    ],
+    "correct": 0,
+    "explanation": "Пункт 7.3 устанавливает правило и исключения для отдельных ролей.",
+    "source": "ПГО, пункт 7.3",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=7.3%20"
+  },
+  {
+    "id": 65,
+    "topic": "pgo",
+    "question": "Можно ли одному сотруднику выехать на ограбление, если исключения не применяются?",
+    "options": [
+      "Нет, требуется как минимум два человека",
+      "Да, всегда",
+      "Да, если включить сирену"
+    ],
+    "correct": 0,
+    "explanation": "ПГО устанавливает минимальный состав из двух человек с указанными исключениями.",
+    "source": "ПГО, пункт 7.3.1",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=7.3.1%20"
+  },
+  {
+    "id": 66,
+    "topic": "pgo",
+    "question": "Сколько по общему правилу ПГО хранить запись задержания?",
+    "options": [
+      "48 часов с момента инцидента",
+      "5 минут",
+      "До выхода из игры"
+    ],
+    "correct": 0,
+    "explanation": "Пункт 7.4 устанавливает хранение записи в течение 48 часов.",
+    "source": "ПГО, пункт 7.4",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=7.4%20"
+  },
+  {
+    "id": 67,
+    "topic": "pgo",
+    "question": "Какой видеоматериал нужен по ПГО?",
+    "options": [
+      "Цельный, без обработки, с оригинальным звуком и качеством от 480p",
+      "Только скриншот концовки",
+      "Монтаж без звука"
+    ],
+    "correct": 0,
+    "explanation": "ПГО предъявляет требования к целостности, звуку и качеству записи.",
+    "source": "ПГО, пункт 7.4",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=7.4%20"
+  },
+  {
+    "id": 68,
+    "topic": "pgo",
+    "question": "Розыск по ситуации закончился, непрерывное преследование не продолжается. Что проверить?",
+    "options": [
+      "Исключение, например ордер или иск",
+      "Задержать без дополнительных оснований",
+      "Выдать розыск повторно только из-за истечения"
+    ],
+    "correct": 0,
+    "explanation": "ПГО ограничивает задержание рамками одной RP-ситуации и предусматривает исключения.",
+    "source": "ПГО, пункт 7.6",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=7.6%20"
+  },
+  {
+    "id": 69,
+    "topic": "pgo",
+    "question": "Можно ли провести уголовный RP-допрос без следователя СК, если исключение не применяется?",
+    "options": [
+      "Нет, нужно присутствие следователя СК",
+      "Да, всегда",
+      "Только при пяти звёздах"
+    ],
+    "correct": 0,
+    "explanation": "Пункт 13.1.1 устанавливает участие следователя СК и оговаривает исключение.",
+    "source": "ПГО, пункт 13.1.1",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=13.1.1%20"
+  },
+  {
+    "id": 70,
+    "topic": "pgo",
+    "question": "Какова максимальная продолжительность RP-допроса по ПГО?",
+    "options": [
+      "60 минут",
+      "3 часа",
+      "Без ограничения"
+    ],
+    "correct": 0,
+    "explanation": "Пункт 13.5 ограничивает продолжительность допроса 60 минутами.",
+    "source": "ПГО, пункт 13.5",
+    "url": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/",
+    "directUrl": "https://forum.russia.online/threads/pravila-gosudarstvennykh-organizatsii.11/#:~:text=13.5%20"
+  },
+  {
+    "id": 71,
+    "topic": "procedure",
+    "question": "Обвиняемый должен самостоятельно доказывать невиновность?",
+    "options": [
+      "Нет, бремя доказывания лежит на стороне обвинения",
+      "Да, всегда",
+      "Только при двух звёздах"
+    ],
+    "correct": 0,
+    "explanation": "Статья 14 закрепляет презумпцию невиновности и бремя доказывания.",
+    "source": "УПК, ст. 14",
+    "url": "https://forum.russia.online/threads/ugolovno-protsessual-nyi-kodeks-ro.39485/"
+  },
+  {
+    "id": 72,
+    "topic": "procedure",
+    "question": "Когда возможен осмотр жилища по общему правилу УПК?",
+    "options": [
+      "С согласия проживающих или по судебному решению, с законными исключениями",
+      "По желанию любого сотрудника",
+      "Только после выдачи пяти звёзд"
+    ],
+    "correct": 0,
+    "explanation": "Статья 12 предусматривает согласие или судебное решение и законные исключения.",
+    "source": "УПК, ст. 12",
+    "url": "https://forum.russia.online/threads/ugolovno-protsessual-nyi-kodeks-ro.39485/"
+  },
+  {
+    "id": 73,
+    "topic": "procedure",
+    "question": "Как использовать доказательство, полученное с нарушением УПК?",
+    "options": [
+      "Оно недопустимо и не может лежать в основе обвинения",
+      "Всегда считать достаточным",
+      "Заменить им все другие доказательства"
+    ],
+    "correct": 0,
+    "explanation": "Статья 75 устанавливает недопустимость доказательств, полученных с нарушением УПК.",
+    "source": "УПК, ст. 75",
+    "url": "https://forum.russia.online/threads/ugolovno-protsessual-nyi-kodeks-ro.39485/"
+  },
+  {
+    "id": 74,
+    "topic": "procedure",
+    "question": "Как оценивают доказательства?",
+    "options": [
+      "По относимости, допустимости и достоверности, а совокупность — по достаточности",
+      "Только по размеру файла",
+      "По званию составившего рапорт"
+    ],
+    "correct": 0,
+    "explanation": "Статья 88 перечисляет критерии оценки доказательств.",
+    "source": "УПК, ст. 88",
+    "url": "https://forum.russia.online/threads/ugolovno-protsessual-nyi-kodeks-ro.39485/"
+  },
+  {
+    "id": 75,
+    "topic": "procedure",
+    "question": "Свидетель не явился по вызову без уважительных причин. Какая мера предусмотрена?",
+    "options": [
+      "Может быть применён привод",
+      "Автоматически назначается лишение свободы",
+      "Его автоматически признают виновным"
+    ],
+    "correct": 0,
+    "explanation": "Статья 113 предусматривает привод при неявке без уважительной причины.",
+    "source": "УПК, ст. 113",
+    "url": "https://forum.russia.online/threads/ugolovno-protsessual-nyi-kodeks-ro.39485/"
+  },
+  {
+    "id": 76,
+    "topic": "procedure",
+    "question": "Может ли защитник заявлять ходатайства?",
+    "options": [
+      "Да, в предусмотренном порядке",
+      "Нет, никогда",
+      "Только после окончания дела"
+    ],
+    "correct": 0,
+    "explanation": "Статья 119 предусматривает право защитника заявлять ходатайства.",
+    "source": "УПК, ст. 119",
+    "url": "https://forum.russia.online/threads/ugolovno-protsessual-nyi-kodeks-ro.39485/"
+  },
+  {
+    "id": 77,
+    "topic": "procedure",
+    "question": "Кто разрешает споры о подследственности?",
+    "options": [
+      "Прокурор",
+      "Любой прохожий",
+      "Только задержанный"
+    ],
+    "correct": 0,
+    "explanation": "Статья 151 относит разрешение споров о подследственности к прокурору.",
+    "source": "УПК, ст. 151",
+    "url": "https://forum.russia.online/threads/ugolovno-protsessual-nyi-kodeks-ro.39485/"
+  },
+  {
+    "id": 78,
+    "topic": "procedure",
+    "question": "Нужна ли запись основания и хода задержания по УПК?",
+    "options": [
+      "Да, предусмотрена видеофиксация",
+      "Нет, достаточно слов сотрудника",
+      "Только если задержанный попросил"
+    ],
+    "correct": 0,
+    "explanation": "Статья 166 включает задержание в перечень действий, требующих записи.",
+    "source": "УПК, ст. 166",
+    "url": "https://forum.russia.online/threads/ugolovno-protsessual-nyi-kodeks-ro.39485/"
+  },
+  {
+    "id": 79,
+    "topic": "procedure",
+    "question": "Сколько может длиться допрос по УПК?",
+    "options": [
+      "Не более 60 минут",
+      "Не более пяти часов",
+      "Срок не установлен"
+    ],
+    "correct": 0,
+    "explanation": "Статья 187 устанавливает предел продолжительности допроса.",
+    "source": "УПК, ст. 187",
+    "url": "https://forum.russia.online/threads/ugolovno-protsessual-nyi-kodeks-ro.39485/"
+  },
+  {
+    "id": 80,
+    "topic": "procedure",
+    "question": "Допустимы ли наводящие вопросы на допросе?",
+    "options": [
+      "Нет, они запрещены",
+      "Да, в любом случае",
+      "Да, если свидетель просит"
+    ],
+    "correct": 0,
+    "explanation": "Статья 189 запрещает наводящие вопросы.",
+    "source": "УПК, ст. 189",
+    "url": "https://forum.russia.online/threads/ugolovno-protsessual-nyi-kodeks-ro.39485/"
+  }
+]
