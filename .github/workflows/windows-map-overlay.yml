@@ -1,0 +1,50 @@
+name: Сборка карты-оверлея Windows
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['desktop-web/**', 'dist/**', '.github/workflows/windows-map-overlay.yml']
+  pull_request:
+    paths: ['desktop-web/**', 'dist/**', '.github/workflows/windows-map-overlay.yml']
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Установить зависимости
+        working-directory: desktop-web
+        run: npm install --no-audit --no-fund
+      - name: Проверить структуру базы
+        working-directory: desktop-web
+        run: npm test
+      - name: Подготовить локальную копию сайта
+        shell: pwsh
+        run: Copy-Item -Recurse dist desktop-web/web
+      - name: Проверить окно и карту
+        working-directory: desktop-web
+        shell: pwsh
+        run: |
+          $p = Start-Process -FilePath (Resolve-Path node_modules/electron/dist/electron.exe) -ArgumentList '"." --self-test' -PassThru -Wait
+          if ($p.ExitCode -ne 0) { throw "Проверка приложения не пройдена: $($p.ExitCode)" }
+      - name: Собрать установщик
+        working-directory: desktop-web
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+        run: npm run build:win
+      - name: Добавить инструкцию
+        shell: pwsh
+        run: Copy-Item desktop-web/README.md desktop-web/release/README.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Arbatsky-Map-Overlay-Windows
+          path: |
+            desktop-web/release/*.exe
+            desktop-web/release/README.md
+          if-no-files-found: error
+          retention-days: 90
