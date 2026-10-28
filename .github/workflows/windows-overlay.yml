@@ -26,6 +26,15 @@ jobs:
       - name: Добавить руководство
         shell: pwsh
         run: Copy-Item desktop/README.md output/README.md
+      - name: Собрать установщик, если Inno Setup доступен
+        shell: pwsh
+        run: |
+          $iscc = Get-Command ISCC.exe -ErrorAction SilentlyContinue
+          $exe = if ($iscc) { $iscc.Source } else { "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe" }
+          if (Test-Path $exe) {
+            & $exe desktop/installer.iss
+            if ($LASTEXITCODE -ne 0) { throw "Ошибка сборки установщика" }
+          } else { Write-Warning "Inno Setup отсутствует: доступна автономная версия приложения." }
       - uses: actions/upload-artifact@v4
         with:
           name: ArbatskyOverlay-Windows-x64
