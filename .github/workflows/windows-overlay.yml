@@ -1,0 +1,29 @@
+name: Сборка приложения Windows
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['desktop/**', 'dist/*.json', '.github/workflows/windows-overlay.yml']
+  pull_request:
+    paths: ['desktop/**', 'dist/*.json', '.github/workflows/windows-overlay.yml']
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Сборка автономного приложения
+        run: dotnet publish desktop/ArbatskyOverlay/ArbatskyOverlay.csproj -c Release -r win-x64 --self-contained true -o output
+      - name: Добавить руководство
+        shell: pwsh
+        run: Copy-Item desktop/README.md output/README.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ArbatskyOverlay-Windows-x64
+          path: output/
+          if-no-files-found: error
+          retention-days: 90
