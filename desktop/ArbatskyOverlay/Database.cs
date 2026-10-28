@@ -56,10 +56,11 @@ public sealed class Database
   foreach(var f in Files) if(!docs.ContainsKey(f)) throw new InvalidDataException("Нет файла "+f);
   using var ext=JsonDocument.Parse(docs["extended.json"]); using var cat=JsonDocument.Parse(docs["catalog.json"]); using var refs=JsonDocument.Parse(docs["references.json"]); using var sum=JsonDocument.Parse(docs["summaries.json"]); using var pgo=JsonDocument.Parse(docs["pgo.json"]); using var cheats=JsonDocument.Parse(docs["cheats.json"]); using var general=JsonDocument.Parse(docs["general.json"]);
   var result=new List<Entry>();
+  var aliases=new Dictionary<string,string>{["317"]="покушение нападение посягательство сотрудник жизнь",["318"]="нападение сотрудник удар насилие угроза",["319"]="оскорбление унижение сотрудник власть",["319.1"]="неподчинение неповиновение отказ требование",["319.2"]="помеха препятствие помешал задержанию",["105"]="убийство убил смерть",["161"]="грабёж грабеж ограбление открытое хищение",["139"]="проникновение дом жилище",["213"]="хулиганство беспорядок",["222"]="оружие ствол боеприпасы патроны спецсредства",["228"]="наркотики наркотик вещества хранение",["228.1"]="наркотики сбыт продажа изготовление производство",["231"]="кусты выращивание культивирование растения наркотики"};
   void AddUk(JsonElement a,bool popular) {
    var n=S(a,"number"); var part=S(a,"part"); if(n=="" || S(a,"title")=="") throw new InvalidDataException("Некорректная статья УК");
    string stars=""; if(a.TryGetProperty("stars",out var star) && star.ValueKind==JsonValueKind.Number && star.TryGetInt32(out int v)) stars=v>0?new string('★',Math.Min(v,5)):(S(a,"starsText") is string s && s!="" ? s : "★–★★★★★");
-   result.Add(new Entry{Id="uk:"+n+":"+part,Section="uk",Number=n,Part=part,Title=S(a,"title"),Summary=S(a,"other"),Stars=stars,Penalty=S(a,"term"),Jurisdiction=S(a,"jurisdiction"),Source=At(Uk,n),Popular=popular});
+   result.Add(new Entry{Id="uk:"+n+":"+part,Section="uk",Number=n,Part=part,Title=S(a,"title"),Summary=S(a,"other"),Stars=stars,Penalty=S(a,"term"),Jurisdiction=S(a,"jurisdiction"),Source=At(Uk,n),Keywords=aliases.TryGetValue(n,out var alias)?alias:"",Popular=popular});
   }
   foreach(var a in Prop(ext.RootElement,"popular").EnumerateArray()) AddUk(a,true);
   foreach(var a in cat.RootElement.EnumerateArray()) AddUk(a,false);
