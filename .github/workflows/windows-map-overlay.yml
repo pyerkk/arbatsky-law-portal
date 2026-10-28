@@ -20,6 +20,9 @@ jobs:
       - name: Установить зависимости
         working-directory: desktop-web
         run: npm install --no-audit --no-fund
+      - name: Подготовить Electron
+        working-directory: desktop-web
+        run: npx install-electron --no
       - name: Проверить структуру базы
         working-directory: desktop-web
         run: npm test
@@ -31,7 +34,7 @@ jobs:
         shell: pwsh
         run: |
           $p = Start-Process -FilePath (Resolve-Path node_modules/electron/dist/electron.exe) -ArgumentList '"." --self-test' -PassThru -Wait
-          if ($p.ExitCode -ne 0) { throw "Проверка приложения не пройдена: $($p.ExitCode)" }
+          if ($p.ExitCode -ne 0) { if (Test-Path "$env:TEMP/arbatsky-selftest-error.txt") { Get-Content "$env:TEMP/arbatsky-selftest-error.txt" }; throw "Проверка приложения не пройдена: $($p.ExitCode)" }
       - name: Собрать установщик
         working-directory: desktop-web
         env:
