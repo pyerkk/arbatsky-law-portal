@@ -18,6 +18,11 @@ jobs:
           dotnet-version: 8.0.x
       - name: Сборка автономного приложения
         run: dotnet publish desktop/ArbatskyOverlay/ArbatskyOverlay.csproj -c Release -r win-x64 --self-contained true -o output
+      - name: Проверить встроенную базу на Windows
+        shell: pwsh
+        run: |
+          $test = Start-Process -FilePath (Resolve-Path output/ArbatskyOverlay.exe) -ArgumentList '--self-test' -Wait -PassThru
+          if ($test.ExitCode -ne 0) { throw "Проверка встроенной базы не пройдена (код $($test.ExitCode))" }
       - name: Добавить руководство
         shell: pwsh
         run: Copy-Item desktop/README.md output/README.md
